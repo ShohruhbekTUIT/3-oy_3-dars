@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,21 +8,22 @@
   <title>Movies catalog</title>
   <link rel="stylesheet" href="./css/bootstrap.css">
 </head>
+
 <body>
   <div class="pb-5">
-    <div class="container-fluid">
+    <div class="container">
       <h1 class="h1 text-center my-4">
         Movies catalog
       </h1>
       <div class="row">
         <div class="col-4">
-
+          
           <div class="mb-4">
             <form action="https://echo.htmlacademy.ru/" method="post">
               <input class="form-control" type="text" placeholder="ave" aria-label="input name">
-
+              
               <input class="form-control my-2" type="number" placeholder="5" aria-label="input age">
-
+              
               <select class="form-select" aria-label="Default select example">
                 <option selected>All</option>
                 <option value="1">One</option>
@@ -37,11 +39,11 @@
               </select>
               
               <div class="d-grid gap-2">
-                <button class="btn btn-primary" type="button">Button</button>
+                <button class="btn btn-primary" type="submit">Button</button>
               </div>
             </form>
           </div>
-
+          
           <div>
             <h2 class="h2">
               Bookmarked movies
@@ -62,7 +64,7 @@
             </ul>
           </div>
         </div>
-
+        
         <div class="col-8">
           <strong>
             Search results: 39
@@ -73,66 +75,190 @@
           <div class="row">
             <div class="col-6">
               <div class="shadow-sm mb-5 bg-body rounded">
-                <img class="rounded-top" src="./images/Marvel_Avengers.png" alt="Marvel Avengers" width="425.6" height="250">
-                <div class="p-3">
-                  <h3 class="h3">
-                    Avengers: Infinity War
-                  </h3>
-                  <span class="d-flex align-items-center mb-2">
-                    <img class="me-2" src="./images/calendar-silhouette.png" alt="Kalendar icon" width="20" height="20">
-                    2018
-                  </span>
-                  <span class="d-flex align-items-center mb-3">
-                    <img class="me-2" src="./images/star.png" alt="Star" width="20" height="20">
-                    8.7
-                  </span>
-                  <div>
-                    <button type="button" class="btn btn-outline-primary">Watch trailer</button>
-                    <button type="button" class="btn btn-outline-secondary">More info</button>
-                    <button type="button" class="btn btn-outline-success">Bookmark</button>
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                    class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+                  </div>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img class="rounded-top d-block w-100" src="./images/Marvel_Avengers.png" alt="Marvel Avengers"
+                      height="250">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="./images/avengers-endgame-promo-crop.jpg" class="rounded-top d-block w-100"
+                      alt="Marvel Avengers" height="250">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="./images/marvels_avengers_large.jpg" class="rounded-top d-block w-100"
+                      alt="Marvel Avengers" height="250">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <div class="p-3">
+              <h3 class="h3">
+                Avengers: Infinity War
+              </h3>
+              <span class="d-flex align-items-center mb-2">
+                <img class="me-2" src="./images/calendar-silhouette.png" alt="Kalendar icon" width="20" height="20">
+                2018
+              </span>
+              <span class="d-flex align-items-center mb-3">
+                <img class="me-2" src="./images/star.png" alt="Star" width="20" height="20">
+                8.7
+              </span>
+              <div>
+                <button type="button" class="btn btn-outline-primary">Watch trailer</button>
+                
+                
+                <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">
+                        Avengers: Infinity War
+                      </h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      Main article: Avengers: Infinity War
+                      Avengers: Infinity War was directed by Anthony and Joe Russo, from a script by Christopher
+                      Markus and Stephen McFeely,and was released on April 27, 2018. Much of
+                      the cast from the first two films return, with additional cast and characters joining from
+                      other MCU films, and Josh Brolin appearing as Thanos.
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
                   </div>
                 </div>
               </div>
+              
+              
+              <button type="button" class="btn btn-outline-info" data-bs-toggle="modal"
+              data-bs-target="#exampleModal1">More info</button>
+              
+              <button type="button" class="btn btn-outline-success">Bookmark</button>
             </div>
-            <div class="col-6">
-              <div class="shadow-sm mb-5 bg-body rounded">
-                <img class="rounded-top" src="./images/The-Avengers.jpg" alt="The Avengers" width="425.6" height="250">
-                <div class="p-3">
-                  <h3 class="h3">
-                    The Avengers
-                  </h3>
-                  <span class="d-flex align-items-center mb-2">
-                    <img class="me-2" src="./images/calendar-silhouette.png" alt="Kalendar icon" width="20" height="20">
-                    2012
-                  </span>
-                  <span class="d-flex align-items-center mb-3">
-                    <img class="me-2" src="./images/star.png" alt="Star" width="20" height="20">
-                    8.1
-                  </span>
-                  <div>
-                    <button type="button" class="btn btn-outline-primary">Watch trailer</button>
-                    <button type="button" class="btn btn-outline-secondary">More info</button>
-                    <button type="button" class="btn btn-outline-success">Bookmark</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div>
-            <nav aria-label="...">
-              <ul class="pagination pagination-sm justify-content-center">
-                <li class="page-item active" aria-current="page">
-                  <span class="page-link">1</span>
-                </li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item"><a class="page-link" href="#">4</a></li>
-              </ul>
-            </nav>
           </div>
         </div>
       </div>
+      <div class="col-6">
+        <div class="shadow-sm mb-5 bg-body rounded">
+          <div id="carouselExampleIndicators1" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+              class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+              aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+              aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="rounded-top d-block w-100" src="./images/The-Avengers.jpg" alt="The Avengers"
+                height="250">
+              </div>
+              <div class="carousel-item">
+                <img class="rounded-top d-block w-100" src="./images/images-avengers.jpg" alt="The Avengers"
+                height="250">
+              </div>
+              <div class="carousel-item">
+                <img class="rounded-top d-block w-100" src="./images/the-aven.jpeg" alt="The Avengers"
+                height="250">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators1"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators1"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <div class="p-3">
+        <h3 class="h3">
+          The Avengers
+        </h3>
+        <span class="d-flex align-items-center mb-2">
+          <img class="me-2" src="./images/calendar-silhouette.png" alt="Kalendar icon" width="20" height="20">
+          2012
+        </span>
+        <span class="d-flex align-items-center mb-3">
+          <img class="me-2" src="./images/star.png" alt="Star" width="20" height="20">
+          8.1
+        </span>
+        <div>
+          <button type="button" class="btn btn-outline-primary">Watch trailer</button>
+          <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">
+                  The Avengers
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                Main article: Avengers:The Avengers , Age of Ultron
+                The sequel, titled Avengers: Age of Ultron,was written and directed by Whedon,
+                and released on May 1, 2015. Much of the cast returns, with the addition of Elizabeth
+                Olsen as Scarlet Witch, Aaron Taylor-Johnson as Quicksilver, Paul Bettany as Vision, and
+                James Spader as Ultron.
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="btn btn-outline-info" data-bs-toggle="modal"
+        data-bs-target="#exampleModal2">More info</button>
+        <button type="button" class="btn btn-outline-success">Bookmark</button>
+      </div>
     </div>
   </div>
+</div>
+</div>
+<div>
+  <nav aria-label="...">
+    <ul class="pagination pagination-sm justify-content-center">
+      <li class="page-item active" aria-current="page">
+        <span class="page-link">1</span>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item"><a class="page-link" href="#">4</a></li>
+    </ul>
+  </nav>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<script src="./js/bootstrap.js"></script>
 </body>
+
 </html>
